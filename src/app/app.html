@@ -1,0 +1,22 @@
+<main>
+   <div class="container-fluid">
+    <table class="table text-center">
+     <tr>
+       <th></th>
+       <th class="text-center">id</th>
+       <th class="text-center">name</th>
+       <th class="text-center">surname</th>
+       <th class="text-center">date of birth</th>
+       <th class="text-center">mobile number</th>
+       <th class="text-center">address</th>
+       <th class="text-center">
+         <button ng-click="app.editSelected()" class="btn btn-sm btn-primary">
+           <i class="glyphicon glyphicon-edit"></i>
+            Edit selected
+         </button>
+       </th>
+     </tr>
+      <tr tr-input-to-text-directive bound-person='person' ng-repeat="person in app.people" ></tr>
+    </table>
+   </div>
+</main>

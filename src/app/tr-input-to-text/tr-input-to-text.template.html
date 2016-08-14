@@ -1,0 +1,47 @@
+    <td class="text-center">
+      <div class="form-group">
+        <input ng-model="$ctrl.boundPerson.isSelected" type="checkbox">
+      </div>
+    </td>
+    <td class="text-center">
+      <span>{{$index+1}}</span>
+    </td>
+    <td class="text-center">
+      <span ng-hide='$ctrl.boundPerson.beingEdited'>{{$ctrl.boundPerson.firstName}}</span>
+      <div class="form-group">
+        <input ng-show="$ctrl.boundPerson.beingEdited" type="text" ng-model="$ctrl.boundPerson.firstName" class="form-control">
+      </div>
+    </td>
+    <td class="text-center">
+      <span ng-hide='$ctrl.boundPerson.beingEdited'>{{$ctrl.boundPerson.lastName}}</span>
+      <div class="form-group">
+        <input ng-show="$ctrl.boundPerson.beingEdited" type="text" ng-model="$ctrl.boundPerson.lastName" class="form-control">
+      </div>
+    </td>
+    <td class="text-center">
+      <span ng-hide='$ctrl.boundPerson.beingEdited'>{{$ctrl.boundPerson.birthDate}}</span>
+      <div class="form-group">
+        <input ng-show="$ctrl.boundPerson.beingEdited" type="text" ng-model="$ctrl.boundPerson.birthDate" class="form-control">
+      </div>
+    </td>
+    <td class="text-center">
+      <span ng-hide='$ctrl.boundPerson.beingEdited'>{{$ctrl.boundPerson.mobileNumber}}</span>
+      <div class="form-group">
+        <input ng-show="$ctrl.boundPerson.beingEdited" type="text" ng-model="$ctrl.boundPerson.mobileNumber" class="form-control">
+      </div>
+    </td>
+    <td class="text-center">
+      <span ng-hide='$ctrl.boundPerson.beingEdited'>{{$ctrl.boundPerson.address}}</span>
+      <div class="form-group">
+        <input ng-show="$ctrl.boundPerson.beingEdited" type="text" ng-model="$ctrl.boundPerson.address" class="form-control">
+      </div>
+    </td>
+    <td class="text-center">
+       <div class="btn-group" role="group">
+        <button class="btn btn-sm btn-primary" ng-click="$ctrl.toggleEdit()">
+          <span ng-hide='$ctrl.boundPerson.beingEdited'><i class="glyphicon glyphicon-edit"></i> Edit</span>
+          <span ng-show="$ctrl.boundPerson.beingEdited"><i class="glyphicon glyphicon-check"></i> Save</span>
+        </button>
+        <button class="btn btn-sm btn-danger"  ng-click="app.delete($index)"><i class="glyphicon glyphicon-remove"></i> Delete</button>
+       </div>
+    </td>
